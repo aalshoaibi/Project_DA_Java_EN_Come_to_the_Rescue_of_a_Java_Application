@@ -51,7 +51,7 @@ public class AnalyticsCounter {
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 			for (Map.Entry<String, Integer> into : countSymptoms.entrySet()) {
-				writer.write(into.getKey() + " = " + into.getValue().toString());
+				writer.write(into.getKey() + " = " + into.getValue());
 				writer.newLine();
 
 			}
