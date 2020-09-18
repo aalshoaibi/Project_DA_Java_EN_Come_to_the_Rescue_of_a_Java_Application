@@ -13,10 +13,10 @@ import java.util.TreeMap;
 
 public class AnalyticsCounter {
 	/**
-	 *  Create a map to use it to get
+	 * Create a map to use it to get
 	 * the symptoms and count the occurrences.
 	 * assign it to a new Treemap which will allow us to sort the symptoms alphabetically.
-	 * */
+	 */
 
 	Map<String, Integer> countSymptoms = new TreeMap<>();
 
@@ -24,21 +24,19 @@ public class AnalyticsCounter {
 	/**
 	 * a method to get the symptoms from
 	 * list and count the  number of occurrences.
+	 *
 	 * @param symptoms input list
 	 */
 
 
-
 	public void symptomsFromReader(List<String> symptoms) {
-		for (String symptom : symptoms)
+		for (String symptom : symptoms) {
 			if (countSymptoms.containsKey(symptom))
 				countSymptoms.put(symptom, countSymptoms.get(symptom) + 1);
 			else
 				countSymptoms.put(symptom, 1);
-
-
-
-
+		}
+		
 	}
 
 	/**
@@ -61,18 +59,15 @@ public class AnalyticsCounter {
 			e.printStackTrace();
 		}
 	}
-
 	/**
 	 * A method to use ReadSymptomFromFile class to read files.
 	 *
 	 * @param filepath the path of the file we want to read.
 	 * @return return method Getsymptoms from the class ReadSymptomsFromfile.
 	 */
-	public List<String> readfile(String filepath) {
-		return new ReadSymptomDataFromFile(filepath).GetSymptoms();
+	public List<String> readfile(String filePath) {
+		return new ReadSymptomDataFromFile(filePath).getSymptoms();
 	}
-
-
 
 }
 
