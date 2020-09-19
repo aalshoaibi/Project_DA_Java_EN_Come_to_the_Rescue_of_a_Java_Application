@@ -65,7 +65,7 @@ public class AnalyticsCounter {
 	 * @param filepath the path of the file we want to read.
 	 * @return return method Getsymptoms from the class ReadSymptomsFromfile.
 	 */
-	public List<String> readfile(String filePath) {
+	public List<String> readFile(String filePath) {
 		return new ReadSymptomDataFromFile(filePath).getSymptoms();
 	}
 

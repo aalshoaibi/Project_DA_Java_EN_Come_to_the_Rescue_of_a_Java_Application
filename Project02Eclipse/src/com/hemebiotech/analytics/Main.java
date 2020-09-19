@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args){
 
         AnalyticsCounter count = new AnalyticsCounter();
-        List<String> read = count.readfile("symptoms.txt");
+        List<String> read = count.readFile("symptoms.txt");
         count.symptomsFromReader(read);
         String result = "result.out";
         count.write(result);
